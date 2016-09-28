@@ -31,15 +31,19 @@ CREATE TABLE `users` (
   `first_name` varchar(32) NOT NULL,
   `last_name` varchar(32) NOT NULL,
   `email` varchar(128) NOT NULL,
-  `password` varchar(32) NOT NULL
-) ENGINE=MyISAM DEFAULT CHARSET=utf8;
+  `password` varchar(128) NOT NULL
+) ENGINE=MyISAM DEFAULT CHARSET=utf8 ROW_FORMAT=DYNAMIC;
 
 --
 -- Схема на данните от таблица `users`
 --
 
 INSERT INTO `users` (`user_id`, `first_name`, `last_name`, `email`, `password`) VALUES
-(1, 'test', 'test', 'test@test.bg', 'testpass');
+(1, 'test', 'test', 'test@test.bg', '$2a$07$2uDLvp1Ii2e./U9C8sBjqetFVVjBpIZlt4wEhAVkjjZSzsi3L.eSq'),
+(4, 'milena', 'vyagova', 'mimozka_v@abv.bg', '$2a$07$2uDLvp1Ii2e./U9C8sBjqe6/iyP0RlJm5KXPTmIzXtvpeKMJFt.kO'),
+(3, 'ivan', 'nikolov', 'quicky@abv.bg', '$2a$07$2uDLvp1Ii2e./U9C8sBjqexzlj7WZ8/O9P7ie9Zl/8/p667YwFQXe'),
+(5, 'fdssfd', 'dddsd', 'dsd@sdds.bg', '$2a$07$2uDLvp1Ii2e./U9C8sBjqexp6Uum6jYFAw4UtnQUt2vqyBcV2HoHy'),
+(6, 'ivan', 'nikolov', 'ivan.nikolov@mailinator.com', '$2a$07$2uDLvp1Ii2e./U9C8sBjqexp6Uum6jYFAw4UtnQUt2vqyBcV2HoHy');
 
 --
 -- Indexes for dumped tables
@@ -60,7 +64,7 @@ ALTER TABLE `users`
 -- AUTO_INCREMENT for table `users`
 --
 ALTER TABLE `users`
-  MODIFY `user_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
+  MODIFY `user_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=7;
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
 /*!40101 SET CHARACTER_SET_RESULTS=@OLD_CHARACTER_SET_RESULTS */;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
