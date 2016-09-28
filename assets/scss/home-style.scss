@@ -1,0 +1,134 @@
+@import 'reset';
+
+$color_0: #333;
+$color_1: #350f00;
+$color_2: rgba(0, 0, 0, 0.5);
+$color_3: #f7e7c3;
+$color_4: #c7b790;
+$color_5: #230f00;
+
+$font: Arial, Helvetica, sans-serif;
+
+$url_0: url(../images/wood-paper.jpg);
+$url_1: url(../images/logo.png);
+
+%extend_1 {
+	margin-right: 0.3em;
+	font-size: 1.3em;
+	display: inline-block;
+}
+
+html {
+	width: 100%;
+	height: 100%;
+	background: $color_0 $url_0 no-repeat 0 0;
+	background-size: cover;
+}
+#container {
+	display: block;
+	font-family: $font;
+	width: 700px;
+	font-size: 1em;
+	line-height: 1.4;
+	margin: 15% auto 0 auto;
+	> div {
+		&:first-child {
+			margin-right: 5%;
+			display: inline-block;
+			float: left;
+			width: 43%;
+			height: 210px;
+		}
+		&:nth-child(2) {
+			display: inline-block;
+			float: left;
+			width: 52%;
+			height: 210px;
+		}
+	}
+}
+h2 {
+	color: $color_1;
+	font-size: 1.3em;
+	line-height: 1.3;
+	font-weight: bold;
+	text-shadow: 0 2px 2px $color_2;
+	text-align: justify;
+}
+.signin {
+	width: 160px;
+	display: block;
+	margin: 20px auto;
+	a {
+		width: 160px;
+		font-size: 1.3em;
+		color: $color_3;
+		text-align: center;
+		height: 30px;
+		line-height: 30px;
+		display: inline-block;
+		text-decoration: none;
+		background: $color_1;
+		border: 1px solid $color_3;
+		padding: 8px 0;
+		border-radius: 10px;
+		box-shadow: 0 1px 5px 0 $color_2;
+		&:active {
+			color: $color_4;
+			background: $color_5;
+		}
+	}
+}
+footer {
+	margin: 23% 0 0 10%;
+	display: inline-block;
+	width: 80%;
+	#nav {
+		width: 100%;
+		float: left;
+		display: block;
+		color: $color_1;
+		text-align: center;
+		a {
+			text-shadow: 0 2px 2px $color_2;
+			text-decoration: none;
+			color: $color_1;
+		}
+		p {
+			@extend %extend_1;
+		}
+		ul li {
+			@extend %extend_1;
+		}
+	}
+	> p {
+		font-size: 0.8em;
+		text-align: center;
+	}
+}
+@media only screen and(max-width: 1100px) {
+	#container {
+		width: 400px;
+		margin: 8% auto 0 auto;
+		> div {
+			&:first-child {
+				height: 130px;
+				padding-left: 13%;
+				display: block;
+				width: 100%;
+			}
+			&:nth-child(2) {
+				display: block;
+				width: 100%;
+			}
+		}
+	}
+	footer {
+		margin-top: 25%;
+	}
+}
+h1#logo {
+	background: $url_1 no-repeat 0 0;
+	width: 300px;
+	height: 100px;
+}

@@ -1,0 +1,231 @@
+@import 'reset';
+
+$font: Arial, Helvetica, sans-serif;
+
+$color_0: #350f00;
+$color_1: #f7e7c3;
+$color_2: rgba(255, 255, 255, 0.5);
+$color_3: #400f00;
+$color_4: #d6b071;
+$color_5: #ff0000;
+$color_6: #ee0000;
+$color_7: #ffa000;
+
+%extend_1 {
+	text-shadow: 0 2px 2px $color_2;
+	text-decoration: none;
+	color: $color_1;
+}
+
+%extend_2 {
+	text-shadow: 0 2px 2px $color_2;
+	text-decoration: none;
+	color: $color_3;
+}
+
+body {
+	background: $color_4;
+	font-family: $font;
+}
+#container > div {
+	width: 850px;
+	margin: 0 auto;
+	display: block;
+	> div:first-child {
+		float: left;
+	}
+	tr {
+		&:nth-child(even) {
+			background: $color_3;
+			color: $color_1;
+		}
+		&:nth-child(odd) {
+			background: $color_1;
+			color: $color_3;
+		}
+		td button {
+			outline: none;
+			border: none;
+			text-shadow: 0 2px 2px $color_2;
+			background: transparent;
+			&:hover {
+				cursor: pointer;
+			}
+			&.fa-pencil {
+				margin-right: 5px;
+				color: $color_7;
+			}
+			&.fa-times {
+				color: $color_5;
+			}
+		}
+	}
+	div.temp {
+		text-align: right;
+		color: $color_1;
+		button {
+			outline: none;
+			border: none;
+			background: transparent;
+			&:hover {
+				cursor: pointer;
+			}
+			&.fa-plus {
+				text-shadow: 0 2px 2px $color_2;
+				color: $color_0;
+			}
+		}
+	}
+	h1.temp {
+		margin: 0.5em 0 0.3em 0;
+		text-align: center;
+		font-size: 3em;
+		font-weight: bold;
+		color: $color_3;
+	}
+	table {
+		width: 100%;
+		border: 3px solid $color_3;
+		border-collapse: collapse;
+	}
+	td {
+		height: 30px;
+		padding: 10px;
+		font-size: 1.5em;
+		text-align: center;
+	}
+	th {
+		height: 30px;
+		padding: 10px;
+		font-size: 1.5em;
+		color: $color_1;
+		background: $color_0;
+		font-weight: bold;
+	}
+}
+nav {
+	width: 100%;
+	display: block;
+	background: $color_0;
+	height: 40px;
+	padding-top: 7px;
+	h1 {
+		color: $color_1;
+		font-size: 2em;
+		font-weight: bold;
+		display: inline-block;
+		width: 40%;
+		text-align: center;
+		float: left;
+		a {
+			@extend %extend_1;
+		}
+	}
+	ul {
+		margin-left: 20%;
+		padding-top: 5px;
+		width: 40%;
+		display: inline-block;
+		li {
+			margin-right: 1em;
+			font-size: 1.3em;
+			display: inline-block;
+			a {
+				@extend %extend_1;
+			}
+		}
+	}
+}
+.wrapper {
+	width: 40%;
+	margin: 0.8em;
+	display: inline-block;
+	padding: 1em;
+	font-size: 1.3em;
+	font-family: $font;
+	border: 2px solid $color_0;
+	border-radius: 10px;
+	box-shadow: 10px 10px 5px $color_0;
+	#forgot {
+		display: block;
+		p {
+			text-align: right;
+			a {
+				@extend %extend_2;
+			}
+		}
+	}
+	h1 {
+		margin-bottom: 8px;
+		text-align: center;
+		font-weight: bold;
+		color: $color_3;
+	}
+	label {
+		display: inline-block;
+		color: $color_0;
+		margin: 5px 0;
+		font-weight: bold;
+	}
+	input {
+		width: 100%;
+		font-size: 1em;
+		padding: 10px;
+		margin: 8px 0;
+		display: inline-block;
+		border: 1px solid $color_0;
+		border-radius: 5px;
+		box-sizing: border-box;
+		background: $color_1;
+		&:focus {
+			outline: none;
+			box-shadow: 0 0 10px $color_0;
+		}
+	}
+	button {
+		border-radius: 10px;
+		background: $color_0;
+		color: $color_1;
+		padding: 8px 12px;
+		font-size: 1em;
+		&:focus {
+			outline: none;
+		}
+		&:hover {
+			cursor: pointer;
+		}
+	}
+	#error {
+		font-weight: bold;
+		text-align: center;
+	}
+	.error {
+		font-weight: bold;
+		text-align: center;
+		color: $color_5;
+	}
+	.err {
+		border-color: $color_6;
+		box-shadow: 0 0 10px $color_6;
+	}
+}
+footer {
+	display: block;
+	width: 30%;
+	margin: 2em auto;
+	p {
+		display: inline-block;
+		color: $color_3;
+		text-align: center;
+		a {
+			@extend %extend_2;
+		}
+		&:first-child {
+			float: left;
+			font-size: 1.5em;
+		}
+		&:last-child {
+			float: right;
+		}
+	}
+}

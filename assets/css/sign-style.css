@@ -1,0 +1,220 @@
+/* http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline; }
+
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure,
+footer, header, hgroup, menu, nav, section {
+  display: block; }
+
+body {
+  line-height: 1; }
+
+ol, ul {
+  list-style: none; }
+
+blockquote, q {
+  quotes: none; }
+
+blockquote:before, blockquote:after,
+q:before, q:after {
+  content: '';
+  content: none; }
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0; }
+
+nav h1 a, nav ul li a {
+  text-shadow: 0 2px 2px rgba(255, 255, 255, 0.5);
+  text-decoration: none;
+  color: #f7e7c3; }
+
+.wrapper #forgot p a, footer p a {
+  text-shadow: 0 2px 2px rgba(255, 255, 255, 0.5);
+  text-decoration: none;
+  color: #400f00; }
+
+body {
+  background: #d6b071;
+  font-family: Arial, Helvetica, sans-serif; }
+
+#container > div {
+  width: 850px;
+  margin: 0 auto;
+  display: block; }
+  #container > div > div:first-child {
+    float: left; }
+  #container > div tr:nth-child(even) {
+    background: #400f00;
+    color: #f7e7c3; }
+  #container > div tr:nth-child(odd) {
+    background: #f7e7c3;
+    color: #400f00; }
+  #container > div button {
+    outline: none;
+  }
+  #container > div tr td button {
+    outline: none;
+    border: none;
+    text-shadow: 0 2px 2px rgba(255, 255, 255, 0.5);
+    background: transparent; }
+    #container > div tr td button:hover {
+      cursor: pointer; }
+    #container > div tr td button.fa-pencil {
+      margin-right: 5px;
+      color: #ffa000; }
+    #container > div tr td button.fa-times {
+      color: #ff0000; }
+  #container > div div.temp {
+    text-align: right;
+    color: #f7e7c3; }
+    #container > div div.temp button {
+      outline: none;
+      border: none;
+      background: transparent; }
+      #container > div div.temp button:hover {
+        cursor: pointer; }
+      #container > div div.temp button.fa-plus {
+        text-shadow: 0 2px 2px rgba(255, 255, 255, 0.5);
+        color: #350f00; }
+  #container > div h1.temp {
+    margin: 0.5em 0 0.3em 0;
+    text-align: center;
+    font-size: 3em;
+    font-weight: bold;
+    color: #400f00; }
+  #container > div table {
+    width: 100%;
+    border: 3px solid #400f00;
+    border-collapse: collapse; }
+  #container > div td {
+    height: 30px;
+    padding: 10px;
+    font-size: 1.5em;
+    text-align: center; }
+  #container > div th {
+    height: 30px;
+    padding: 10px;
+    font-size: 1.5em;
+    color: #f7e7c3;
+    background: #350f00;
+    font-weight: bold; }
+
+nav {
+  width: 100%;
+  display: block;
+  background: #350f00;
+  height: 40px;
+  padding-top: 7px; }
+  nav h1 {
+    color: #f7e7c3;
+    font-size: 2em;
+    font-weight: bold;
+    display: inline-block;
+    width: 40%;
+    text-align: center;
+    float: left; }
+  nav ul {
+    margin-left: 20%;
+    padding-top: 5px;
+    width: 40%;
+    display: inline-block; }
+    nav ul li {
+      margin-right: 1em;
+      font-size: 1.3em;
+      display: inline-block; }
+
+.wrapper {
+  width: 40%;
+  margin: 0.8em;
+  display: inline-block;
+  padding: 1em;
+  font-size: 1.3em;
+  font-family: Arial, Helvetica, sans-serif;
+  border: 2px solid #350f00;
+  border-radius: 10px;
+  box-shadow: 10px 10px 5px #350f00; }
+  .wrapper #forgot {
+    display: block; }
+    .wrapper #forgot p {
+      text-align: right; }
+  .wrapper h1 {
+    margin-bottom: 8px;
+    text-align: center;
+    font-weight: bold;
+    color: #400f00; }
+  .wrapper label {
+    display: inline-block;
+    color: #350f00;
+    margin: 5px 0;
+    font-weight: bold; }
+  .wrapper input {
+    width: 100%;
+    font-size: 1em;
+    padding: 10px;
+    margin: 8px 0;
+    display: inline-block;
+    border: 1px solid #350f00;
+    border-radius: 5px;
+    box-sizing: border-box;
+    background: #f7e7c3; }
+    .wrapper input:focus {
+      outline: none;
+      box-shadow: 0 0 10px #350f00; }
+  .wrapper button, #get_data>div>button, #data-container>div>button {
+    border-radius: 10px;
+    background: #350f00;
+    color: #f7e7c3;
+    padding: 8px 12px;
+    font-size: 1em; }
+    .wrapper button:focus {
+      outline: none; }
+    .wrapper button:hover {
+      cursor: pointer; }
+  .wrapper #error {
+    font-weight: bold;
+    text-align: center; }
+  .wrapper .error {
+    font-weight: bold;
+    text-align: center;
+    color: #ff0000; }
+  .wrapper .err {
+    border-color: #ee0000;
+    box-shadow: 0 0 10px #ee0000; }
+
+footer {
+  display: block;
+  width: 30%;
+  margin: 2em auto; }
+  footer p {
+    display: inline-block;
+    color: #400f00;
+    text-align: center; }
+    footer p:first-child {
+      float: left;
+      font-size: 1.5em; }
+    footer p:last-child {
+      float: right; }
+
+/*# sourceMappingURL=sign-style.css.map */
